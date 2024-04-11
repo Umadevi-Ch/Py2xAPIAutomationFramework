@@ -4,7 +4,6 @@
 # Delete the Booking
 
 # Verify that created booking id when we update we are able to update it and delete it also
-
 # create token
 # create booking
 # test_update() -> concept?
@@ -64,10 +63,8 @@ class TestCRUDBooking(object):
             in_json=False
         )
         # Verification here & more
-        verify_json_key_for_not_null(response.json()["firstname"])
         verify_response_key(response.json()["firstname"], "Amit")
         verify_response_key(response.json()["lastname"], "Brown")
-        verify_json_key_for_not_null(response.json()["lastname"])
         verify_http_status_code(response_data=response, expect_data=200)
 
     @allure.title("Test CRUD operation Delete(delete)")
