@@ -46,4 +46,4 @@ def test_create_auth_with_excel():
         password = user_cred["password"]
         print(username, password)
         response = create_auth_request(username=username, password=password)
-        print(response.status_code)
+       # print(response.status_code)
